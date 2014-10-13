@@ -10,11 +10,10 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.IGameService.Return(Lina.AnCo.Core.GameModel,System.Action{Lina.AnCo.Core.GameModel,Lina.AnCo.Core.NotificationType})">
+        <member name="M:Lina.AnCo.Core.IGameService.Return(Lina.AnCo.Core.GameModel,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
             <summary>
-            Gọi hàm nay khi có đáp án của user, sẽ trả về câu hỏi mới, Có 2 trường hợp xảy ra:
-            Trường hợp 1: Nếu user trả lời đúng thì kiểm tra xem có lên level không, nếu lên level thì NotificationType = LevelUp, nếu không thì Notication = AnswerTrue
-            Trường hợp 2: Nếu user trả lời sai thì kiểm tra xem số câu trả lời lưu trong database có lớn hơn số câu trả lời vừa trả lời không, nếu lớn hơn thì NoticationType = QuestionUp, nếu không thì NotificationType = AnswerFalse
+            Trường hợp 1: Nếu user trả lời đúng thì kiểm tra NotificationType, nếu NotificationType == NotificationType.LevelUp thì thông báo Level Up, sau đó chuyển sang câu tiếp theo, nếu không thì chuyển sang câu hỏi tiếp theo.
+            Trường hợp 2: Nếu user trả lời sai thì thông báo game over sau đó kiểm tra NotificationType, nếu NotificationType == NotificationType.QuestionUp thì thông báo có thành tích mới.
             </summary>
             <param name="game">Game.</param>
             <param name="actionDone">Action done.</param>
@@ -23,14 +22,76 @@
             <summary>
             Platform chủ gọi hàm này nếu muốn Stop Game. Dùng khi hết thời gian
             </summary>
-            <returns>
-                <c>true</c>, if game was stoped, <c>false</c> otherwise.</returns>
-            <param name="question">Question.</param>
+            <param name="game">Game.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="T:Lina.AnCo.Core.GameService">
+            <summary>
+            Game service.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.GameService" /> class.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
+            <summary>
+            Starts the game.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.Return(Lina.AnCo.Core.GameModel,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
+            <summary>
+            Trường hợp 1: Nếu user trả lời đúng thì kiểm tra NotificationType, nếu NotificationType ==
+            NotificationType.LevelUp thì thông báo Level Up, sau đó chuyển sang câu tiếp theo, nếu không thì chuyển sang câu
+            hỏi tiếp theo.
+            Trường hợp 2: Nếu user trả lời sai thì thông báo game over sau đó kiểm tra NotificationType, nếu NotificationType
+            == NotificationType.QuestionUp thì thông báo có thành tích mới.
+            </summary>
+            <param name="game">Game.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.StopGame(Lina.AnCo.Core.GameModel,System.Action{Lina.AnCo.Core.NotificationType})">
+            <summary>
+            Platform chủ gọi hàm này nếu muốn Stop Game. Dùng khi hết thời gian
+            </summary>
+            <param name="game">Game.</param>
+            <param name="actionDone">Action done.</param>
         </member>
         <member name="F:Lina.AnCo.Core.QuestionModel.userAnswer">
             <summary>
             User tra loi xong thi gan gia tri vao thuoc tinh nay
             </summary>
+        </member>
+        <member name="T:Lina.AnCo.Core.ACGlobalService">
+            <summary>
+            AC global service.
+            </summary>
+        </member>
+        <member name="P:Lina.AnCo.Core.ACGlobalService.Game">
+            <summary>
+            Gets the game.
+            </summary>
+            <value>The game.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.ACGlobalService.Setting">
+            <summary>
+            Gets the setting.
+            </summary>
+            <value>The setting.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.ACGlobalService.Converter">
+            <summary>
+            Gets the converter.
+            </summary>
+            <value>The converter.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.ACGlobalService.Payment">
+            <summary>
+            Gets the payment.
+            </summary>
+            <value>The payment.</value>
         </member>
         <member name="P:Lina.AnCo.Core.UserModel.NumberOfQuestionAnswered">
             <summary>
@@ -38,15 +99,38 @@
             </summary>
             <value>The number of question answered.</value>
         </member>
+        <member name="T:Lina.AnCo.Core.GameModel">
+            <summary>
+            Game model.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.GameModel" /> class.
+            </summary>
+        </member>
+        <member name="P:Lina.AnCo.Core.GameModel.User">
+            <summary>
+            Gets the user.
+            </summary>
+            <value>The user.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.GameModel.Question">
+            <summary>
+            Gets or sets the question.
+            </summary>
+            <value>The question.</value>
+        </member>
         <member name="P:Lina.AnCo.Core.GameModel.MaxNumberOfQuestion">
             <summary>
             Số câu hỏi tối đa trong 1 GameModel
             </summary>
         </member>
-        <member name="F:Lina.AnCo.Core.GameModel.numberOfQuestionAnswered">
+        <member name="P:Lina.AnCo.Core.GameModel.NumberOfQuestionAnswered">
             <summary>
             Thứ tự câu hỏi hiện tại trong gói câu hỏi.
             </summary>
+            <value>The number of question answered.</value>
         </member>
         <member name="P:Lina.AnCo.Core.GameModel.Timer">
             <summary>
@@ -59,6 +143,17 @@
             </summary>
             <returns>
                 <c>true</c>, if question was checked, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameModel.CheckQuestion(System.Action{System.Boolean,Lina.AnCo.Core.NotificationType})">
+            <summary>
+            Checks the question.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameModel.Start">
+            <summary>
+            Start this instance.
+            </summary>
         </member>
     </members>
 </doc>
