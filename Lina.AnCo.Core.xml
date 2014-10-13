@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lina.AnCo.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Lina.AnCo.Core.IGameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
+            <summary>
+            Starts the game.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.Return(Lina.AnCo.Core.GameModel,System.Action{Lina.AnCo.Core.GameModel,Lina.AnCo.Core.NotificationType})">
+            <summary>
+            Gọi hàm nay khi có đáp án của user, sẽ trả về câu hỏi mới, Có 2 trường hợp xảy ra:
+            Trường hợp 1: Nếu user trả lời đúng thì kiểm tra xem có lên level không, nếu lên level thì NotificationType = LevelUp, nếu không thì Notication = AnswerTrue
+            Trường hợp 2: Nếu user trả lời sai thì kiểm tra xem số câu trả lời lưu trong database có lớn hơn số câu trả lời vừa trả lời không, nếu lớn hơn thì NoticationType = QuestionUp, nếu không thì NotificationType = AnswerFalse
+            </summary>
+            <param name="game">Game.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.StopGame(Lina.AnCo.Core.GameModel,System.Action{Lina.AnCo.Core.NotificationType})">
+            <summary>
+            Platform chủ gọi hàm này nếu muốn Stop Game. Dùng khi hết thời gian
+            </summary>
+            <returns>
+                <c>true</c>, if game was stoped, <c>false</c> otherwise.</returns>
+            <param name="question">Question.</param>
+        </member>
+        <member name="F:Lina.AnCo.Core.QuestionModel.userAnswer">
+            <summary>
+            User tra loi xong thi gan gia tri vao thuoc tinh nay
+            </summary>
+        </member>
+        <member name="P:Lina.AnCo.Core.UserModel.NumberOfQuestionAnswered">
+            <summary>
+            Thành tích tốt nhất mà user đạt được.
+            </summary>
+            <value>The number of question answered.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.GameModel.MaxNumberOfQuestion">
+            <summary>
+            Số câu hỏi tối đa trong 1 GameModel
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.GameModel.numberOfQuestionAnswered">
+            <summary>
+            Thứ tự câu hỏi hiện tại trong gói câu hỏi.
+            </summary>
+        </member>
+        <member name="P:Lina.AnCo.Core.GameModel.Timer">
+            <summary>
+            The timer. Unit second.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameModel.CheckQuestion">
+            <summary>
+            Kiểm tra xem câu trả lời đưa ra đã đúng chưa
+            </summary>
+            <returns>
+                <c>true</c>, if question was checked, <c>false</c> otherwise.</returns>
+        </member>
+    </members>
+</doc>
