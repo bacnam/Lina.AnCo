@@ -4,6 +4,11 @@
         <name>Lina.AnCo.Core</name>
     </assembly>
     <members>
+        <member name="T:Lina.AnCo.Core.IGameService">
+            <summary>
+            I game service.
+            </summary>
+        </member>
         <member name="M:Lina.AnCo.Core.IGameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
             <summary>
             Starts the game.
@@ -59,10 +64,82 @@
             <param name="game">Game.</param>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="F:Lina.AnCo.Core.QuestionModel.userAnswer">
+        <member name="T:Lina.AnCo.Core.CalculationType">
             <summary>
-            User tra loi xong thi gan gia tri vao thuoc tinh nay
+            Calculation type.
             </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.CalculationType.Addition">
+            <summary>
+            The addition.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.CalculationType.Subtraction">
+            <summary>
+            The subtraction.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.CalculationType.Multiplication">
+            <summary>
+            The multiplication.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.CalculationType.Division">
+            <summary>
+            The division.
+            </summary>
+        </member>
+        <member name="T:Lina.AnCo.Core.QuestionModel">
+            <summary>
+            Question model.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.QuestionModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.QuestionModel" /> class.
+            </summary>
+        </member>
+        <member name="P:Lina.AnCo.Core.QuestionModel.LeftQuestion">
+            <summary>
+            Gets the left question.
+            </summary>
+            <value>The left question.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.QuestionModel.RightQuestion">
+            <summary>
+            Gets the right question.
+            </summary>
+            <value>The right question.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.QuestionModel.Calculation">
+            <summary>
+            Gets the calculation.
+            </summary>
+            <value>The calculation.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.QuestionModel.RightAnswer">
+            <summary>
+            Gets the right answer.
+            </summary>
+            <value>The right answer.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.QuestionModel.LeftAnswer">
+            <summary>
+            Gets the left answer.
+            </summary>
+            <value>The left answer.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.QuestionModel.Result">
+            <summary>
+            Gets the result.
+            </summary>
+            <value>The result.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.QuestionModel.UserAnswer">
+            <summary>
+            User trả lời xong thì gán vào thuộc tính này.
+            </summary>
+            <value>The user answer.</value>
         </member>
         <member name="T:Lina.AnCo.Core.ACGlobalService">
             <summary>
@@ -92,6 +169,53 @@
             Gets the payment.
             </summary>
             <value>The payment.</value>
+        </member>
+        <member name="T:Lina.AnCo.Core.SettingKey">
+            <summary>
+            Setting key.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.SettingKey.FirstRun">
+            <summary>
+            The first run.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.SettingKey.QuestionNumber">
+            <summary>
+            The question number.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.SettingKey.Level">
+            <summary>
+            The level.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.SettingKey.Gold">
+            <summary>
+            The gold.
+            </summary>
+        </member>
+        <member name="T:Lina.AnCo.Core.UserModel">
+            <summary>
+            User model.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.UserModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.UserModel" /> class.
+            </summary>
+        </member>
+        <member name="P:Lina.AnCo.Core.UserModel.CurrentUser">
+            <summary>
+            Gets the current user.
+            </summary>
+            <value>The current user.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.UserModel.Level">
+            <summary>
+            Gets or sets the level.
+            </summary>
+            <value>The level.</value>
         </member>
         <member name="P:Lina.AnCo.Core.UserModel.NumberOfQuestionAnswered">
             <summary>
@@ -137,22 +261,35 @@
             The timer. Unit second.
             </summary>
         </member>
-        <member name="M:Lina.AnCo.Core.GameModel.CheckQuestion">
-            <summary>
-            Kiểm tra xem câu trả lời đưa ra đã đúng chưa
-            </summary>
-            <returns>
-                <c>true</c>, if question was checked, <c>false</c> otherwise.</returns>
-        </member>
         <member name="M:Lina.AnCo.Core.GameModel.CheckQuestion(System.Action{System.Boolean,Lina.AnCo.Core.NotificationType})">
             <summary>
-            Checks the question.
+            Kiểm tra xem câu trả lời đưa ra đã đúng chưa.
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
         <member name="M:Lina.AnCo.Core.GameModel.Start">
             <summary>
             Start this instance.
+            </summary>
+        </member>
+        <member name="T:Lina.AnCo.Core.NotificationType">
+            <summary>
+            Notification type.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.NotificationType.LevelUp">
+            <summary>
+            The level up.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.NotificationType.QuestionUp">
+            <summary>
+            The question up.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.NotificationType.Unknow">
+            <summary>
+            The unknow.
             </summary>
         </member>
     </members>

@@ -4,6 +4,21 @@
         <name>Lina.Customs.Core</name>
     </assembly>
     <members>
+        <member name="T:Lina.Customs.Core.IPlatformService">
+            <summary>
+            I platform service.
+            </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.PlatformService">
+            <summary>
+            Platform service.
+            </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.ISettingService">
+            <summary>
+            I setting service.
+            </summary>
+        </member>
         <member name="M:Lina.Customs.Core.ISettingService.GetValueOrDefault``1(System.String,``0)">
             <summary>
             Gets the current value or the default that you specify.
@@ -25,6 +40,140 @@
             <summary>
             Saves any changes out.
             </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.SettingService">
+            <summary>
+            Setting service.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.SettingService.GetValueOrDefault``1(System.String,``0)">
+            <summary>
+            Gets the current value or the default that you specify.
+            </summary>
+            <typeparam name="T">Vaue of t (bool, int, float, long, string)</typeparam>
+            <param name="key">Key for settings</param>
+            <param name="defaultValue">default value if not set</param>
+            <returns>Value or default</returns>
+        </member>
+        <member name="M:Lina.Customs.Core.SettingService.AddOrUpdateValue(System.String,System.Object)">
+            <summary>
+            Adds or updates the value
+            </summary>
+            <param name="key">Key for settting</param>
+            <param name="value">Value to set</param>
+            <returns>True of was added or updated and you need to save it.</returns>
+        </member>
+        <member name="M:Lina.Customs.Core.SettingService.Save">
+            <summary>
+            Saves any changes out.
+            </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.ServiceContainer">
+            <summary>
+            Service container.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.ServiceContainer.Register``1(``0)">
+            <summary>
+            Register the specified service.
+            </summary>
+            <param name="service">Service.</param>
+            <typeparam name="TService">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:Lina.Customs.Core.ServiceContainer.Register``1">
+            <summary>
+            Register this instance.
+            </summary>
+            <typeparam name="TService">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:Lina.Customs.Core.ServiceContainer.Register``1(System.Func{System.Object})">
+            <summary>
+            Register the specified function.
+            </summary>
+            <param name="function">Function.</param>
+            <typeparam name="TService">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:Lina.Customs.Core.ServiceContainer.Resolve``1">
+            <summary>
+            Resolve this instance.
+            </summary>
+            <typeparam name="TService">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:Lina.Customs.Core.ServiceContainer.Resolve``1(System.Func{System.Object})">
+            <summary>
+            Resolve the specified function.
+            </summary>
+            <param name="function">Function.</param>
+            <typeparam name="TService">The 1st type parameter.</typeparam>
+        </member>
+        <member name="T:Lina.Customs.Core.IConverterService">
+            <summary>
+            I converter service.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.IConverterService.TimeToString(System.Int32)">
+            <summary>
+            Times to string.
+            </summary>
+            <returns>The to string.</returns>
+            <param name="time">Time.</param>
+        </member>
+        <member name="T:Lina.Customs.Core.ConverterService">
+            <summary>
+            Converter service.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.ConverterService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.Customs.Core.ConverterService" /> class.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.ConverterService.TimeToString(System.Int32)">
+            <summary>
+            Times to string.
+            </summary>
+            <returns>The to string.</returns>
+            <param name="time">Time.</param>
+        </member>
+        <member name="T:Lina.Customs.Core.IPaymentService">
+            <summary>
+            I payment service.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.IPaymentService.GetItems(System.String,System.Action{System.Boolean,System.Collections.Generic.List{Lina.Customs.Core.ItemModel}})">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="productIdentify">Product identify.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="T:Lina.Customs.Core.PaymentService">
+            <summary>
+            Payment service.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.PaymentService.GetItems(System.String,System.Action{System.Boolean,System.Collections.Generic.List{Lina.Customs.Core.ItemModel}})">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="productIdentify">Product identify.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="T:Lina.Customs.Core.ItemModel">
+            <summary>
+            Item model.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.ItemModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.Customs.Core.ItemModel" /> class.
+            </summary>
+        </member>
+        <member name="P:Lina.Customs.Core.ItemModel.Id">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <value>The identifier.</value>
         </member>
     </members>
 </doc>
