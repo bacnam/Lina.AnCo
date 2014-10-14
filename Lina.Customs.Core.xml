@@ -15,6 +15,15 @@
             </summary>
             <value>The version.</value>
         </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.ShowAlert(System.String,System.String,System.String,System.Action)">
+            <summary>
+            Shows the alert.
+            </summary>
+            <param name="title">Title.</param>
+            <param name="messages">Messages.</param>
+            <param name="doneTitle">Done title.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
         <member name="M:Lina.Customs.Core.IPlatformService.ShowAlert(System.String,System.String,System.String,System.String,System.Action,System.Action)">
             <summary>
             Shows the alert.
@@ -47,6 +56,15 @@
             Gets the version. Return iOS, Android, WindowPhone
             </summary>
             <value>The version.</value>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.ShowAlert(System.String,System.String,System.String,System.Action)">
+            <summary>
+            Shows the alert.
+            </summary>
+            <param name="title">Title.</param>
+            <param name="messages">Messages.</param>
+            <param name="doneTitle">Done title.</param>
+            <param name="actionDone">Action done.</param>
         </member>
         <member name="M:Lina.Customs.Core.PlatformService.ShowAlert(System.String,System.String,System.String,System.String,System.Action,System.Action)">
             <summary>
@@ -196,7 +214,7 @@
             I payment service.
             </summary>
         </member>
-        <member name="M:Lina.Customs.Core.IPaymentService.Pay(System.String,System.Action{System.Boolean,System.Double})">
+        <member name="M:Lina.Customs.Core.IPaymentService.Pay(System.String,System.Action{System.Boolean,System.String})">
             <summary>
             productId: Mã sản phẩm, nếu pay ok thì actionDone(true,Giá trị) ngược lại actionDone(false,0)
             </summary>
@@ -208,7 +226,7 @@
             Payment service.
             </summary>
         </member>
-        <member name="M:Lina.Customs.Core.PaymentService.Pay(System.String,System.Action{System.Boolean,System.Double})">
+        <member name="M:Lina.Customs.Core.PaymentService.Pay(System.String,System.Action{System.Boolean,System.String})">
             <summary>
             productId: Mã sản phẩm, nếu pay ok thì actionDone(true,Giá trị) ngược lại actionDone(false,0)
             </summary>
@@ -266,11 +284,6 @@
         <member name="F:Lina.Customs.Core.Platform.Unknow">
             <summary>
             The unknow.
-            </summary>
-        </member>
-        <member name="T:Lina.Customs.Core.ProductPriceType">
-            <summary>
-            Product price type.
             </summary>
         </member>
     </members>
