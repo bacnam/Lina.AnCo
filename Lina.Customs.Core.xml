@@ -286,5 +286,40 @@
             The unknow.
             </summary>
         </member>
+        <member name="T:Lina.Customs.Core.ProductType">
+            <summary>
+            Product type.
+            </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.ProductType.IOS">
+            <summary>
+            IO.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.ProductType.IOS.P099">
+            <summary>
+            The p099. Price: 0.99$
+            </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.ProductType.WindowsPhone">
+            <summary>
+            Windows phone.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.ProductType.WindowsPhone.P099">
+            <summary>
+            The p099. Price: 0.99$
+            </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.ProductType.Android">
+            <summary>
+            Android.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.ProductType.Android.P099">
+            <summary>
+            The p099. Price: 0.99$
+            </summary>
+        </member>
     </members>
 </doc>
