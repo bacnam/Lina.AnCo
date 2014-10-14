@@ -9,9 +9,65 @@
             I platform service.
             </summary>
         </member>
+        <member name="P:Lina.Customs.Core.IPlatformService.Version">
+            <summary>
+            Gets the version. Return iOS, Android, WindowPhone
+            </summary>
+            <value>The version.</value>
+        </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.ShowAlert(System.String,System.String,System.String,System.String,System.Action,System.Action)">
+            <summary>
+            Shows the alert.
+            </summary>
+            <param name="title">Title.</param>
+            <param name="messages">Messages.</param>
+            <param name="doneTitle">Done title.</param>
+            <param name="cancelTitle">Cancel title.</param>
+            <param name="actionDone">Action done.</param>
+            <param name="actionCancel">Action cancel.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.ShowLoadingView(System.String)">
+            <summary>
+            Shows the loading view.
+            </summary>
+            <param name="title">Title.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.HideLoadingView">
+            <summary>
+            Hides the loading view.
+            </summary>
+        </member>
         <member name="T:Lina.Customs.Core.PlatformService">
             <summary>
             Platform service.
+            </summary>
+        </member>
+        <member name="P:Lina.Customs.Core.PlatformService.Version">
+            <summary>
+            Gets the version. Return iOS, Android, WindowPhone
+            </summary>
+            <value>The version.</value>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.ShowAlert(System.String,System.String,System.String,System.String,System.Action,System.Action)">
+            <summary>
+            Shows the alert.
+            </summary>
+            <param name="title">Title.</param>
+            <param name="messages">Messages.</param>
+            <param name="doneTitle">Done title.</param>
+            <param name="cancelTitle">Cancel title.</param>
+            <param name="actionDone">Action done.</param>
+            <param name="actionCancel">Action cancel.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.ShowLoadingView(System.String)">
+            <summary>
+            Shows the loading view.
+            </summary>
+            <param name="title">Title.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.HideLoadingView">
+            <summary>
+            Hides the loading view.
             </summary>
         </member>
         <member name="T:Lina.Customs.Core.ISettingService">
@@ -140,11 +196,11 @@
             I payment service.
             </summary>
         </member>
-        <member name="M:Lina.Customs.Core.IPaymentService.GetItems(System.String,System.Action{System.Boolean,System.Collections.Generic.List{Lina.Customs.Core.ItemModel}})">
+        <member name="M:Lina.Customs.Core.IPaymentService.Pay(System.String,System.Action{System.Boolean,System.Double})">
             <summary>
-            Gets the items.
+            productId: Mã sản phẩm, nếu pay ok thì actionDone(true,Giá trị) ngược lại actionDone(false,0)
             </summary>
-            <param name="productIdentify">Product identify.</param>
+            <param name="productId">Product identifier.</param>
             <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.Customs.Core.PaymentService">
@@ -152,28 +208,70 @@
             Payment service.
             </summary>
         </member>
-        <member name="M:Lina.Customs.Core.PaymentService.GetItems(System.String,System.Action{System.Boolean,System.Collections.Generic.List{Lina.Customs.Core.ItemModel}})">
+        <member name="M:Lina.Customs.Core.PaymentService.Pay(System.String,System.Action{System.Boolean,System.Double})">
             <summary>
-            Gets the items.
+            productId: Mã sản phẩm, nếu pay ok thì actionDone(true,Giá trị) ngược lại actionDone(false,0)
             </summary>
-            <param name="productIdentify">Product identify.</param>
+            <param name="productId">Product identifier.</param>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="T:Lina.Customs.Core.ItemModel">
+        <member name="T:Lina.Customs.Core.ProductModel">
             <summary>
             Item model.
             </summary>
         </member>
-        <member name="M:Lina.Customs.Core.ItemModel.#ctor">
+        <member name="M:Lina.Customs.Core.ProductModel.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Lina.Customs.Core.ItemModel" /> class.
+            Initializes a new instance of the <see cref="T:Lina.Customs.Core.ProductModel" /> class.
             </summary>
         </member>
-        <member name="P:Lina.Customs.Core.ItemModel.Id">
+        <member name="P:Lina.Customs.Core.ProductModel.Id">
             <summary>
-            Gets the identifier.
+            Gets the identify.
             </summary>
-            <value>The identifier.</value>
+            <value>The identify.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.ProductModel.Price">
+            <summary>
+            Gets the price.
+            </summary>
+            <value>The price.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.ProductModel.Description">
+            <summary>
+            Gets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="T:Lina.Customs.Core.Platform">
+            <summary>
+            Platform.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.Platform.iOS">
+            <summary>
+            The iOS.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.Platform.Android">
+            <summary>
+            The android.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.Platform.WindowPhone">
+            <summary>
+            The window phone.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.Platform.Unknow">
+            <summary>
+            The unknow.
+            </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.ProductPriceType">
+            <summary>
+            Product price type.
+            </summary>
         </member>
     </members>
 </doc>
