@@ -233,34 +233,6 @@
             <param name="productId">Product identifier.</param>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="T:Lina.Customs.Core.ProductModel">
-            <summary>
-            Item model.
-            </summary>
-        </member>
-        <member name="M:Lina.Customs.Core.ProductModel.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Lina.Customs.Core.ProductModel" /> class.
-            </summary>
-        </member>
-        <member name="P:Lina.Customs.Core.ProductModel.Id">
-            <summary>
-            Gets the identify.
-            </summary>
-            <value>The identify.</value>
-        </member>
-        <member name="P:Lina.Customs.Core.ProductModel.Price">
-            <summary>
-            Gets the price.
-            </summary>
-            <value>The price.</value>
-        </member>
-        <member name="P:Lina.Customs.Core.ProductModel.Description">
-            <summary>
-            Gets the description.
-            </summary>
-            <value>The description.</value>
-        </member>
         <member name="T:Lina.Customs.Core.Platform">
             <summary>
             Platform.
@@ -286,37 +258,37 @@
             The unknow.
             </summary>
         </member>
-        <member name="T:Lina.Customs.Core.ProductType">
+        <member name="T:Lina.Customs.Core.ProductModel">
             <summary>
             Product type.
             </summary>
         </member>
-        <member name="T:Lina.Customs.Core.ProductType.IOS">
+        <member name="T:Lina.Customs.Core.ProductModel.IOS">
             <summary>
             IO.
             </summary>
         </member>
-        <member name="F:Lina.Customs.Core.ProductType.IOS.P099">
+        <member name="F:Lina.Customs.Core.ProductModel.IOS.P099">
             <summary>
             The p099. Price: 0.99$
             </summary>
         </member>
-        <member name="T:Lina.Customs.Core.ProductType.WindowsPhone">
+        <member name="T:Lina.Customs.Core.ProductModel.WindowsPhone">
             <summary>
             Windows phone.
             </summary>
         </member>
-        <member name="F:Lina.Customs.Core.ProductType.WindowsPhone.P099">
+        <member name="F:Lina.Customs.Core.ProductModel.WindowsPhone.P099">
             <summary>
             The p099. Price: 0.99$
             </summary>
         </member>
-        <member name="T:Lina.Customs.Core.ProductType.Android">
+        <member name="T:Lina.Customs.Core.ProductModel.Android">
             <summary>
             Android.
             </summary>
         </member>
-        <member name="F:Lina.Customs.Core.ProductType.Android.P099">
+        <member name="F:Lina.Customs.Core.ProductModel.Android.P099">
             <summary>
             The p099. Price: 0.99$
             </summary>
