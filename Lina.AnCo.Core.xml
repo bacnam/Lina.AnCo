@@ -170,6 +170,12 @@
             </summary>
             <value>The payment.</value>
         </member>
+        <member name="P:Lina.AnCo.Core.ACGlobalService.Platform">
+            <summary>
+            Gets the platform.
+            </summary>
+            <value>The platform.</value>
+        </member>
         <member name="T:Lina.AnCo.Core.SettingKey">
             <summary>
             Setting key.
