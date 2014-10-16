@@ -21,7 +21,7 @@
             </summary>
             <param name="title">Title.</param>
             <param name="messages">Messages.</param>
-            <param name="doneTitle">Done title.</param>
+            <param name="titleDone">Title done.</param>
             <param name="actionDone">Action done.</param>
         </member>
         <member name="M:Lina.Customs.Core.IPlatformService.ShowAlert(System.String,System.String,System.String,System.String,System.Action,System.Action)">
@@ -30,8 +30,8 @@
             </summary>
             <param name="title">Title.</param>
             <param name="messages">Messages.</param>
-            <param name="doneTitle">Done title.</param>
-            <param name="cancelTitle">Cancel title.</param>
+            <param name="titleDone">Title done.</param>
+            <param name="titleCancel">Title cancel.</param>
             <param name="actionDone">Action done.</param>
             <param name="actionCancel">Action cancel.</param>
         </member>
@@ -45,6 +45,19 @@
             <summary>
             Hides the loading view.
             </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.StreamAudio(System.String,System.Action{System.Boolean})">
+            <summary>
+            Streams the audio. PathAudio có thể là 1 file local hoặc file trên internet
+            </summary>
+            <param name="pathAudio">Path audio.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.StopStreamAudio(System.Action{System.Boolean})">
+            <summary>
+            Stops the stream audio.
+            </summary>
+            <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.Customs.Core.PlatformService">
             <summary>
@@ -63,7 +76,7 @@
             </summary>
             <param name="title">Title.</param>
             <param name="messages">Messages.</param>
-            <param name="doneTitle">Done title.</param>
+            <param name="titleDone">Title done.</param>
             <param name="actionDone">Action done.</param>
         </member>
         <member name="M:Lina.Customs.Core.PlatformService.ShowAlert(System.String,System.String,System.String,System.String,System.Action,System.Action)">
@@ -72,8 +85,8 @@
             </summary>
             <param name="title">Title.</param>
             <param name="messages">Messages.</param>
-            <param name="doneTitle">Done title.</param>
-            <param name="cancelTitle">Cancel title.</param>
+            <param name="titleDone">Title done.</param>
+            <param name="titleCancel">Title cancel.</param>
             <param name="actionDone">Action done.</param>
             <param name="actionCancel">Action cancel.</param>
         </member>
@@ -87,6 +100,19 @@
             <summary>
             Hides the loading view.
             </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.StreamAudio(System.String,System.Action{System.Boolean})">
+            <summary>
+            Streams the audio. PathAudio có thể là 1 file local hoặc file trên internet
+            </summary>
+            <param name="pathAudio">Path audio.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.StopStreamAudio(System.Action{System.Boolean})">
+            <summary>
+            Stops the stream audio.
+            </summary>
+            <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.Customs.Core.ISettingService">
             <summary>
@@ -187,7 +213,7 @@
         </member>
         <member name="M:Lina.Customs.Core.IConverterService.TimeToString(System.Int32)">
             <summary>
-            Times to string.
+            Times to string. Unit Second
             </summary>
             <returns>The to string.</returns>
             <param name="time">Time.</param>
@@ -204,7 +230,7 @@
         </member>
         <member name="M:Lina.Customs.Core.ConverterService.TimeToString(System.Int32)">
             <summary>
-            Times to string.
+            Times to string. Unit Second
             </summary>
             <returns>The to string.</returns>
             <param name="time">Time.</param>
