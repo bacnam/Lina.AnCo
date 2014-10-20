@@ -59,6 +59,19 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.GetAlbums(System.Action{System.Boolean,System.Collections.Generic.List{Lina.Customs.Core.AlbumModel}})">
+            <summary>
+            Gets the albums.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.GetPhotos(System.String,System.Action{System.Boolean,System.Collections.Generic.List{Lina.Customs.Core.PhotoModel}})">
+            <summary>
+            Gets the photos.
+            </summary>
+            <param name="album">Album.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
         <member name="T:Lina.Customs.Core.PlatformService">
             <summary>
             Platform service.
@@ -112,6 +125,19 @@
             <summary>
             Stops the stream audio.
             </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.GetAlbums(System.Action{System.Boolean,System.Collections.Generic.List{Lina.Customs.Core.AlbumModel}})">
+            <summary>
+            Gets the albums.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.GetPhotos(System.String,System.Action{System.Boolean,System.Collections.Generic.List{Lina.Customs.Core.PhotoModel}})">
+            <summary>
+            Gets the photos.
+            </summary>
+            <param name="album">Album.</param>
             <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.Customs.Core.ISettingService">
@@ -318,6 +344,80 @@
             <summary>
             The p099. Price: 0.99$
             </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.ISystemService">
+            <summary>
+            I system service.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.ISystemService.CountDown(System.Int32,System.Action,System.Action,System.Int32)">
+            <summary>
+            Counts down. atTime and timeStep unit second
+            </summary>
+            <param name="atTime">At time.</param>
+            <param name="actionStep">Action step.</param>
+            <param name="actionDone">Action done.</param>
+            <param name="timeStep">Time step.</param>
+        </member>
+        <member name="T:Lina.Customs.Core.SystemService">
+            <summary>
+            System service.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.SystemService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.Customs.Core.SystemService" /> class.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.SystemService.CountDown(System.Int32,System.Action,System.Action,System.Int32)">
+            <summary>
+            Counts down. atTime and timeStep unit second
+            </summary>
+            <param name="atTime">At time.</param>
+            <param name="actionStep">Action step.</param>
+            <param name="actionDone">Action done.</param>
+            <param name="timeStep">Time step.</param>
+        </member>
+        <member name="T:Lina.Customs.Core.CTGlobalService">
+            <summary>
+            CT global service.
+            </summary>
+        </member>
+        <member name="P:Lina.Customs.Core.CTGlobalService.Setting">
+            <summary>
+            Gets the setting.
+            </summary>
+            <value>The setting.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.CTGlobalService.Converter">
+            <summary>
+            Gets the converter.
+            </summary>
+            <value>The converter.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.CTGlobalService.Payment">
+            <summary>
+            Gets the payment.
+            </summary>
+            <value>The payment.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.CTGlobalService.Platform">
+            <summary>
+            Gets the platform.
+            </summary>
+            <value>The platform.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.CTGlobalService.System">
+            <summary>
+            Gets the system.
+            </summary>
+            <value>The system.</value>
+        </member>
+        <member name="M:Lina.Customs.Core.CTGlobalService.WriteLine(System.String)">
+            <summary>
+            Writes the line.
+            </summary>
+            <param name="st">St.</param>
         </member>
     </members>
 </doc>

@@ -141,6 +141,12 @@
             </summary>
             <value>The user answer.</value>
         </member>
+        <member name="P:Lina.AnCo.Core.QuestionModel.Description">
+            <summary>
+            Gets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
         <member name="T:Lina.AnCo.Core.ACGlobalService">
             <summary>
             AC global service.
@@ -151,30 +157,6 @@
             Gets the game.
             </summary>
             <value>The game.</value>
-        </member>
-        <member name="P:Lina.AnCo.Core.ACGlobalService.Setting">
-            <summary>
-            Gets the setting.
-            </summary>
-            <value>The setting.</value>
-        </member>
-        <member name="P:Lina.AnCo.Core.ACGlobalService.Converter">
-            <summary>
-            Gets the converter.
-            </summary>
-            <value>The converter.</value>
-        </member>
-        <member name="P:Lina.AnCo.Core.ACGlobalService.Payment">
-            <summary>
-            Gets the payment.
-            </summary>
-            <value>The payment.</value>
-        </member>
-        <member name="P:Lina.AnCo.Core.ACGlobalService.Platform">
-            <summary>
-            Gets the platform.
-            </summary>
-            <value>The platform.</value>
         </member>
         <member name="T:Lina.AnCo.Core.SettingKey">
             <summary>
