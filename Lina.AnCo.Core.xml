@@ -141,12 +141,6 @@
             </summary>
             <value>The user answer.</value>
         </member>
-        <member name="P:Lina.AnCo.Core.QuestionModel.Description">
-            <summary>
-            Gets the description.
-            </summary>
-            <value>The description.</value>
-        </member>
         <member name="T:Lina.AnCo.Core.ACGlobalService">
             <summary>
             AC global service.

@@ -419,5 +419,53 @@
             </summary>
             <param name="st">St.</param>
         </member>
+        <member name="T:Lina.Customs.Core.IFacebookService">
+            <summary>
+            I facebook service.
+            </summary>
+        </member>
+        <member name="P:Lina.Customs.Core.IFacebookService.IsLogin">
+            <summary>
+            Gets a value indicating whether this instance is login.
+            </summary>
+            <value>
+                <c>true</c> if this instance is login; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Lina.Customs.Core.IFacebookService.Login(System.Action{System.Boolean,System.String})">
+            <summary>
+            Login the specified actionDone.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.IFacebookService.Logout(System.Action{System.Boolean,System.String})">
+            <summary>
+            Logout the specified actionDone.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="T:Lina.Customs.Core.FacebookService">
+            <summary>
+            Facebook service.
+            </summary>
+        </member>
+        <member name="P:Lina.Customs.Core.FacebookService.IsLogin">
+            <summary>
+            Gets a value indicating whether this instance is login.
+            </summary>
+            <value>true</value>
+            <c>false</c>
+        </member>
+        <member name="M:Lina.Customs.Core.FacebookService.Login(System.Action{System.Boolean,System.String})">
+            <summary>
+            Login the specified actionDone.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.FacebookService.Logout(System.Action{System.Boolean,System.String})">
+            <summary>
+            Logout the specified actionDone.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
     </members>
 </doc>
