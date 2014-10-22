@@ -15,7 +15,7 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.IGameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel},System.Action{System.Int32},System.Action{Lina.AnCo.Core.GameModel})">
+        <member name="M:Lina.AnCo.Core.IGameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel},System.Action{Lina.AnCo.Core.GameModel})">
             <summary>
             Starts the game.
             </summary>
@@ -67,7 +67,7 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.GameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel},System.Action{System.Int32},System.Action{Lina.AnCo.Core.GameModel})">
+        <member name="M:Lina.AnCo.Core.GameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel},System.Action{Lina.AnCo.Core.GameModel})">
             <summary>
             Starts the game.
             </summary>
