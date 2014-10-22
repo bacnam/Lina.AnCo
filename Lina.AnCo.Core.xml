@@ -316,15 +316,5 @@
             The unknow.
             </summary>
         </member>
-        <member name="T:Lina.AnCo.Core.CountModel">
-            <summary>
-            Count model.
-            </summary>
-        </member>
-        <member name="M:Lina.AnCo.Core.CountModel.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.CountModel" /> class.
-            </summary>
-        </member>
     </members>
 </doc>

@@ -390,6 +390,62 @@
             <param name="actionDone">Action done.</param>
             <param name="timeStep">Time step.</param>
         </member>
+        <member name="T:Lina.Customs.Core.PhotoModel">
+            <summary>
+            Photo model.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.PhotoModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.Customs.Core.PhotoModel" /> class.
+            </summary>
+        </member>
+        <member name="P:Lina.Customs.Core.PhotoModel.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.PhotoModel.Count">
+            <summary>
+            Gets or sets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="T:Lina.Customs.Core.AlbumModel">
+            <summary>
+            Album model.
+            </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.AlbumModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.Customs.Core.AlbumModel" /> class.
+            </summary>
+        </member>
+        <member name="P:Lina.Customs.Core.AlbumModel.Count">
+            <summary>
+            Gets or sets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.AlbumModel.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.AlbumModel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.AlbumModel.PosterImage">
+            <summary>
+            Gets or sets the poster image.
+            </summary>
+            <value>The poster image.</value>
+        </member>
         <member name="T:Lina.Customs.Core.CTGlobalService">
             <summary>
             CT global service.
