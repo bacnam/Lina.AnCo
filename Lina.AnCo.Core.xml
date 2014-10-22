@@ -15,6 +15,14 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
+        <member name="M:Lina.AnCo.Core.IGameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel},System.Action{System.Int32},System.Action{Lina.AnCo.Core.GameModel})">
+            <summary>
+            Starts the game.
+            </summary>
+            <param name="actionDone">Action done.</param>
+            <param name="actionCounter">Action counter.</param>
+            <param name="actionGameOver">Action game over.</param>
+        </member>
         <member name="M:Lina.AnCo.Core.IGameService.Return(Lina.AnCo.Core.GameModel,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
             <summary>
             Trường hợp 1: Nếu user trả lời đúng thì kiểm tra NotificationType, nếu NotificationType == NotificationType.LevelUp thì thông báo Level Up, sau đó chuyển sang câu tiếp theo, nếu không thì chuyển sang câu hỏi tiếp theo.
@@ -28,6 +36,19 @@
             Platform chủ gọi hàm này nếu muốn Stop Game. Dùng khi hết thời gian
             </summary>
             <param name="game">Game.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.PauseGame(Lina.AnCo.Core.GameModel,System.Action{System.Boolean})">
+            <summary>
+            Pauses the game.
+            </summary>
+            <param name="game">Game.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.ResumeGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
+            <summary>
+            Resumes the game.
+            </summary>
             <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.AnCo.Core.GameService">
@@ -46,6 +67,14 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
+        <member name="M:Lina.AnCo.Core.GameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel},System.Action{System.Int32},System.Action{Lina.AnCo.Core.GameModel})">
+            <summary>
+            Starts the game.
+            </summary>
+            <param name="actionDone">Action done.</param>
+            <param name="actionCounter">Action counter.</param>
+            <param name="actionGameOver">Action game over.</param>
+        </member>
         <member name="M:Lina.AnCo.Core.GameService.Return(Lina.AnCo.Core.GameModel,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
             <summary>
             Trường hợp 1: Nếu user trả lời đúng thì kiểm tra NotificationType, nếu NotificationType ==
@@ -62,6 +91,19 @@
             Platform chủ gọi hàm này nếu muốn Stop Game. Dùng khi hết thời gian
             </summary>
             <param name="game">Game.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.PauseGame(Lina.AnCo.Core.GameModel,System.Action{System.Boolean})">
+            <summary>
+            Pauses the game.
+            </summary>
+            <param name="game">Game.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.ResumeGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
+            <summary>
+            Resumes the game.
+            </summary>
             <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.AnCo.Core.CalculationType">
@@ -272,6 +314,16 @@
         <member name="F:Lina.AnCo.Core.NotificationType.Unknow">
             <summary>
             The unknow.
+            </summary>
+        </member>
+        <member name="T:Lina.AnCo.Core.CountModel">
+            <summary>
+            Count model.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.CountModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.CountModel" /> class.
             </summary>
         </member>
     </members>

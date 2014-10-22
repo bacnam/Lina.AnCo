@@ -72,6 +72,12 @@
             <param name="album">Album.</param>
             <param name="actionDone">Action done.</param>
         </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.BeginActionOnMainThread(System.Action)">
+            <summary>
+            Begins the action on main thread.
+            </summary>
+            <param name="action">Action.</param>
+        </member>
         <member name="T:Lina.Customs.Core.PlatformService">
             <summary>
             Platform service.
@@ -139,6 +145,12 @@
             </summary>
             <param name="album">Album.</param>
             <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.BeginActionOnMainThread(System.Action)">
+            <summary>
+            Begins the action on main thread.
+            </summary>
+            <param name="action">Action.</param>
         </member>
         <member name="T:Lina.Customs.Core.ISettingService">
             <summary>
@@ -466,6 +478,76 @@
             Logout the specified actionDone.
             </summary>
             <param name="actionDone">Action done.</param>
+        </member>
+        <member name="T:Lina.AnCo.Core.LNCounter">
+            <summary>
+            Counter.
+            </summary>
+        </member>
+        <member name="P:Lina.AnCo.Core.LNCounter.Time">
+            <summary>
+            Gets or sets the time.
+            </summary>
+            <value>The time.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.LNCounter.ActionStep">
+            <summary>
+            Gets or sets the action step.
+            </summary>
+            <value>The action step.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.LNCounter.ActionStop">
+            <summary>
+            Gets or sets the action stop.
+            </summary>
+            <value>The action stop.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.LNCounter.ActionPause">
+            <summary>
+            Gets or sets the action pause.
+            </summary>
+            <value>The action pause.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.LNCounter.ActionContinus">
+            <summary>
+            Gets or sets the action continus.
+            </summary>
+            <value>The action continus.</value>
+        </member>
+        <member name="M:Lina.AnCo.Core.LNCounter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.LNCounter" /> class.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.LNCounter.Start(System.Int32)">
+            <summary>
+            Start the specified _time.
+            </summary>
+            <param name="_time">Time.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.LNCounter.Stop">
+            <summary>
+            Stop this instance.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.LNCounter.Pause">
+            <summary>
+            Pause this instance.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.LNCounter.Resume">
+            <summary>
+            Resume this instance.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.LNCounter.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:Lina.AnCo.Core.LNCounter" /> object.
+            </summary>
+            <remarks>Call <see cref="M:Lina.AnCo.Core.LNCounter.Dispose" /> when you are finished using the <see cref="T:Lina.AnCo.Core.LNCounter" />. The
+            <see cref="M:Lina.AnCo.Core.LNCounter.Dispose" /> method leaves the <see cref="T:Lina.AnCo.Core.LNCounter" /> in an unusable state. After calling
+            <see cref="M:Lina.AnCo.Core.LNCounter.Dispose" />, you must release all references to the <see cref="T:Lina.AnCo.Core.LNCounter" /> so the
+            garbage collector can reclaim the memory that the <see cref="T:Lina.AnCo.Core.LNCounter" /> was occupying.</remarks>
         </member>
     </members>
 </doc>
