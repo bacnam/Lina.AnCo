@@ -587,6 +587,12 @@
             Initializes a new instance of the <see cref="T:Lina.AnCo.Core.LNCounter" /> class.
             </summary>
         </member>
+        <member name="P:Lina.AnCo.Core.LNCounter.ShareCounter">
+            <summary>
+            Gets the current user.
+            </summary>
+            <value>The current user.</value>
+        </member>
         <member name="M:Lina.AnCo.Core.LNCounter.Start(System.Int32)">
             <summary>
             Start the specified _time.
