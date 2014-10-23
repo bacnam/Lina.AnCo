@@ -78,6 +78,12 @@
             </summary>
             <param name="action">Action.</param>
         </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.Shake(System.Action{System.Boolean})">
+            <summary>
+            Shake the specified actionDone.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
         <member name="T:Lina.Customs.Core.PlatformService">
             <summary>
             Platform service.
@@ -151,6 +157,12 @@
             Begins the action on main thread.
             </summary>
             <param name="action">Action.</param>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.Shake(System.Action{System.Boolean})">
+            <summary>
+            Shake the specified actionDone.
+            </summary>
+            <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.Customs.Core.ISettingService">
             <summary>

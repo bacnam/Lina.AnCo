@@ -50,11 +50,16 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.IGameService.PlayAudio(Lina.AnCo.Core.AudioType)">
+        <member name="M:Lina.AnCo.Core.IGameService.PlayAudio(System.String)">
             <summary>
             Plaies the audio.
             </summary>
-            <param name="audioType">Audio type.</param>
+            <param name="file">File.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.Shake">
+            <summary>
+            Shake this instance.
+            </summary>
         </member>
         <member name="M:Lina.AnCo.Core.IGameService.ChangeSoundState(System.Action{System.Boolean})">
             <summary>
@@ -136,11 +141,18 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.GameService.PlayAudio(Lina.AnCo.Core.AudioType)">
+        <member name="M:Lina.AnCo.Core.GameService.PlayAudio(System.String)">
             <summary>
             Plaies the audio.
             </summary>
-            <param name="audioType">Audio type.</param>
+            <param name="file">File.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.Shake">
+            <summary>
+            Gets the state of the shake.
+            </summary>
+            <returns>true</returns>
+            <c>false</c>
         </member>
         <member name="M:Lina.AnCo.Core.GameService.ChangeSoundState(System.Action{System.Boolean})">
             <summary>
