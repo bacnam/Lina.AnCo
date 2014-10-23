@@ -50,6 +50,38 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
+        <member name="M:Lina.AnCo.Core.IGameService.PlayAudio(Lina.AnCo.Core.AudioType)">
+            <summary>
+            Plaies the audio.
+            </summary>
+            <param name="audioType">Audio type.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.ChangeSoundState(System.Action{System.Boolean})">
+            <summary>
+            Changes the state of the sound. ActionDone return current sound state
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.ChangeShakeState(System.Action{System.Boolean})">
+            <summary>
+            Changes the state of the shake. ActionDone return current shake state
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.GetSoundState">
+            <summary>
+            Gets the state of the sound.
+            </summary>
+            <returns>
+                <c>true</c>, if sound state was gotten, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Lina.AnCo.Core.IGameService.GetShakeState">
+            <summary>
+            Gets the state of the shake.
+            </summary>
+            <returns>
+                <c>true</c>, if shake state was gotten, <c>false</c> otherwise.</returns>
+        </member>
         <member name="T:Lina.AnCo.Core.GameService">
             <summary>
             Game service.
@@ -103,6 +135,38 @@
             Resumes the game.
             </summary>
             <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.PlayAudio(Lina.AnCo.Core.AudioType)">
+            <summary>
+            Plaies the audio.
+            </summary>
+            <param name="audioType">Audio type.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.ChangeSoundState(System.Action{System.Boolean})">
+            <summary>
+            Changes the state of the sound. ActionDone return current sound state
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.ChangeShakeState(System.Action{System.Boolean})">
+            <summary>
+            Changes the state of the shake. ActionDone return current shake state
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.GetSoundState">
+            <summary>
+            Gets the state of the sound.
+            </summary>
+            <returns>true</returns>
+            <c>false</c>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.GetShakeState">
+            <summary>
+            Gets the state of the shake.
+            </summary>
+            <returns>
+                <c>true</c>, if shake state was gotten, <c>false</c> otherwise.</returns>
         </member>
         <member name="T:Lina.AnCo.Core.CalculationType">
             <summary>
@@ -215,6 +279,16 @@
         <member name="F:Lina.AnCo.Core.SettingKey.Gold">
             <summary>
             The gold.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.SettingKey.Sound">
+            <summary>
+            The sound.
+            </summary>
+        </member>
+        <member name="F:Lina.AnCo.Core.SettingKey.Shake">
+            <summary>
+            The shake.
             </summary>
         </member>
         <member name="T:Lina.AnCo.Core.UserModel">
