@@ -20,7 +20,6 @@
             Starts the game.
             </summary>
             <param name="actionDone">Action done.</param>
-            <param name="actionCounter">Action counter.</param>
             <param name="actionGameOver">Action game over.</param>
         </member>
         <member name="M:Lina.AnCo.Core.IGameService.Return(Lina.AnCo.Core.GameModel,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
@@ -72,7 +71,6 @@
             Starts the game.
             </summary>
             <param name="actionDone">Action done.</param>
-            <param name="actionCounter">Action counter.</param>
             <param name="actionGameOver">Action game over.</param>
         </member>
         <member name="M:Lina.AnCo.Core.GameService.Return(Lina.AnCo.Core.GameModel,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
