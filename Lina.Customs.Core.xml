@@ -78,7 +78,7 @@
             </summary>
             <param name="action">Action.</param>
         </member>
-        <member name="M:Lina.Customs.Core.IPlatformService.Shake(System.Action{System.Boolean})">
+        <member name="M:Lina.Customs.Core.IPlatformService.Vibrate">
             <summary>
             Shake the specified actionDone.
             </summary>
@@ -158,7 +158,7 @@
             </summary>
             <param name="action">Action.</param>
         </member>
-        <member name="M:Lina.Customs.Core.PlatformService.Shake(System.Action{System.Boolean})">
+        <member name="M:Lina.Customs.Core.PlatformService.Vibrate">
             <summary>
             Shake the specified actionDone.
             </summary>
@@ -569,6 +569,12 @@
             Gets or sets the action stop.
             </summary>
             <value>The action stop.</value>
+        </member>
+        <member name="P:Lina.AnCo.Core.LNCounter.ActionEnd">
+            <summary>
+            Gets or sets the action end.
+            </summary>
+            <value>The action end.</value>
         </member>
         <member name="P:Lina.AnCo.Core.LNCounter.ActionPause">
             <summary>

@@ -56,7 +56,7 @@
             </summary>
             <param name="file">File.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.IGameService.Shake">
+        <member name="M:Lina.AnCo.Core.IGameService.Vibrate">
             <summary>
             Shake this instance.
             </summary>
@@ -67,7 +67,7 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.IGameService.ChangeShakeState(System.Action{System.Boolean})">
+        <member name="M:Lina.AnCo.Core.IGameService.ChangeVibrateState(System.Action{System.Boolean})">
             <summary>
             Changes the state of the shake. ActionDone return current shake state
             </summary>
@@ -80,12 +80,19 @@
             <returns>
                 <c>true</c>, if sound state was gotten, <c>false</c> otherwise.</returns>
         </member>
-        <member name="M:Lina.AnCo.Core.IGameService.GetShakeState">
+        <member name="M:Lina.AnCo.Core.IGameService.GetVibrateState">
             <summary>
             Gets the state of the shake.
             </summary>
             <returns>
                 <c>true</c>, if shake state was gotten, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="P:Lina.AnCo.Core.IGameService.VibrateState">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Lina.AnCo.Core.IGameService" /> vibrate state.
+            </summary>
+            <value>
+                <c>true</c> if vibrate state; otherwise, <c>false</c>.</value>
         </member>
         <member name="T:Lina.AnCo.Core.GameService">
             <summary>
@@ -147,7 +154,7 @@
             </summary>
             <param name="file">File.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.GameService.Shake">
+        <member name="M:Lina.AnCo.Core.GameService.Vibrate">
             <summary>
             Gets the state of the shake.
             </summary>
@@ -160,7 +167,7 @@
             </summary>
             <param name="actionDone">Action done.</param>
         </member>
-        <member name="M:Lina.AnCo.Core.GameService.ChangeShakeState(System.Action{System.Boolean})">
+        <member name="M:Lina.AnCo.Core.GameService.ChangeVibrateState(System.Action{System.Boolean})">
             <summary>
             Changes the state of the shake. ActionDone return current shake state
             </summary>
@@ -173,12 +180,19 @@
             <returns>true</returns>
             <c>false</c>
         </member>
-        <member name="M:Lina.AnCo.Core.GameService.GetShakeState">
+        <member name="M:Lina.AnCo.Core.GameService.GetVibrateState">
             <summary>
             Gets the state of the shake.
             </summary>
             <returns>
                 <c>true</c>, if shake state was gotten, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="P:Lina.AnCo.Core.GameService.VibrateState">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Lina.AnCo.Core.GameService" /> vibrate state.
+            </summary>
+            <value>
+                <c>true</c> if vibrate state; otherwise, <c>false</c>.</value>
         </member>
         <member name="T:Lina.AnCo.Core.CalculationType">
             <summary>
@@ -298,7 +312,7 @@
             The sound.
             </summary>
         </member>
-        <member name="F:Lina.AnCo.Core.SettingKey.Shake">
+        <member name="F:Lina.AnCo.Core.SettingKey.Vibrate">
             <summary>
             The shake.
             </summary>
@@ -369,11 +383,13 @@
             The timer. Unit second.
             </summary>
         </member>
-        <member name="M:Lina.AnCo.Core.GameModel.CheckQuestion(System.Action{System.Boolean,Lina.AnCo.Core.NotificationType})">
+        <member name="M:Lina.AnCo.Core.GameModel.CheckQuestion(Lina.AnCo.Core.NotificationType@)">
             <summary>
-            Kiểm tra xem câu trả lời đưa ra đã đúng chưa.
+            Checks the question. Kiểm tra xem câu trả lời đưa ra đã đúng chưa.
             </summary>
-            <param name="actionDone">Action done.</param>
+            <returns>
+                <c>true</c>, if question was checked, <c>false</c> otherwise.</returns>
+            <param name="noti">Noti.</param>
         </member>
         <member name="M:Lina.AnCo.Core.GameModel.Start">
             <summary>
