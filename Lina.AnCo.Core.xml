@@ -4,196 +4,6 @@
         <name>Lina.AnCo.Core</name>
     </assembly>
     <members>
-        <member name="T:Lina.AnCo.Core.IGameService">
-            <summary>
-            I game service.
-            </summary>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
-            <summary>
-            Starts the game.
-            </summary>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel},System.Action{Lina.AnCo.Core.GameModel})">
-            <summary>
-            Starts the game.
-            </summary>
-            <param name="actionDone">Action done.</param>
-            <param name="actionGameOver">Action game over.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.Return(Lina.AnCo.Core.GameModel,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
-            <summary>
-            Trường hợp 1: Nếu user trả lời đúng thì kiểm tra NotificationType, nếu NotificationType == NotificationType.LevelUp thì thông báo Level Up, sau đó chuyển sang câu tiếp theo, nếu không thì chuyển sang câu hỏi tiếp theo.
-            Trường hợp 2: Nếu user trả lời sai thì thông báo game over sau đó kiểm tra NotificationType, nếu NotificationType == NotificationType.QuestionUp thì thông báo có thành tích mới.
-            </summary>
-            <param name="game">Game.</param>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.StopGame(Lina.AnCo.Core.GameModel,System.Action{Lina.AnCo.Core.NotificationType})">
-            <summary>
-            Platform chủ gọi hàm này nếu muốn Stop Game. Dùng khi hết thời gian
-            </summary>
-            <param name="game">Game.</param>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.PauseGame(Lina.AnCo.Core.GameModel,System.Action{System.Boolean})">
-            <summary>
-            Pauses the game.
-            </summary>
-            <param name="game">Game.</param>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.ResumeGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
-            <summary>
-            Resumes the game.
-            </summary>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.PlayAudio(System.String)">
-            <summary>
-            Plaies the audio.
-            </summary>
-            <param name="file">File.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.Vibrate">
-            <summary>
-            Shake this instance.
-            </summary>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.ChangeSoundState(System.Action{System.Boolean})">
-            <summary>
-            Changes the state of the sound. ActionDone return current sound state
-            </summary>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.ChangeVibrateState(System.Action{System.Boolean})">
-            <summary>
-            Changes the state of the shake. ActionDone return current shake state
-            </summary>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.GetSoundState">
-            <summary>
-            Gets the state of the sound.
-            </summary>
-            <returns>
-                <c>true</c>, if sound state was gotten, <c>false</c> otherwise.</returns>
-        </member>
-        <member name="M:Lina.AnCo.Core.IGameService.GetVibrateState">
-            <summary>
-            Gets the state of the shake.
-            </summary>
-            <returns>
-                <c>true</c>, if shake state was gotten, <c>false</c> otherwise.</returns>
-        </member>
-        <member name="P:Lina.AnCo.Core.IGameService.VibrateState">
-            <summary>
-            Gets a value indicating whether this <see cref="T:Lina.AnCo.Core.IGameService" /> vibrate state.
-            </summary>
-            <value>
-                <c>true</c> if vibrate state; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="T:Lina.AnCo.Core.GameService">
-            <summary>
-            Game service.
-            </summary>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.GameService" /> class.
-            </summary>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
-            <summary>
-            Starts the game.
-            </summary>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel},System.Action{Lina.AnCo.Core.GameModel})">
-            <summary>
-            Starts the game.
-            </summary>
-            <param name="actionDone">Action done.</param>
-            <param name="actionGameOver">Action game over.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.Return(Lina.AnCo.Core.GameModel,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
-            <summary>
-            Trường hợp 1: Nếu user trả lời đúng thì kiểm tra NotificationType, nếu NotificationType ==
-            NotificationType.LevelUp thì thông báo Level Up, sau đó chuyển sang câu tiếp theo, nếu không thì chuyển sang câu
-            hỏi tiếp theo.
-            Trường hợp 2: Nếu user trả lời sai thì thông báo game over sau đó kiểm tra NotificationType, nếu NotificationType
-            == NotificationType.QuestionUp thì thông báo có thành tích mới.
-            </summary>
-            <param name="game">Game.</param>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.StopGame(Lina.AnCo.Core.GameModel,System.Action{Lina.AnCo.Core.NotificationType})">
-            <summary>
-            Platform chủ gọi hàm này nếu muốn Stop Game. Dùng khi hết thời gian
-            </summary>
-            <param name="game">Game.</param>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.PauseGame(Lina.AnCo.Core.GameModel,System.Action{System.Boolean})">
-            <summary>
-            Pauses the game.
-            </summary>
-            <param name="game">Game.</param>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.ResumeGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
-            <summary>
-            Resumes the game.
-            </summary>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.PlayAudio(System.String)">
-            <summary>
-            Plaies the audio.
-            </summary>
-            <param name="file">File.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.Vibrate">
-            <summary>
-            Gets the state of the shake.
-            </summary>
-            <returns>true</returns>
-            <c>false</c>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.ChangeSoundState(System.Action{System.Boolean})">
-            <summary>
-            Changes the state of the sound. ActionDone return current sound state
-            </summary>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.ChangeVibrateState(System.Action{System.Boolean})">
-            <summary>
-            Changes the state of the shake. ActionDone return current shake state
-            </summary>
-            <param name="actionDone">Action done.</param>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.GetSoundState">
-            <summary>
-            Gets the state of the sound.
-            </summary>
-            <returns>true</returns>
-            <c>false</c>
-        </member>
-        <member name="M:Lina.AnCo.Core.GameService.GetVibrateState">
-            <summary>
-            Gets the state of the shake.
-            </summary>
-            <returns>
-                <c>true</c>, if shake state was gotten, <c>false</c> otherwise.</returns>
-        </member>
-        <member name="P:Lina.AnCo.Core.GameService.VibrateState">
-            <summary>
-            Gets a value indicating whether this <see cref="T:Lina.AnCo.Core.GameService" /> vibrate state.
-            </summary>
-            <value>
-                <c>true</c> if vibrate state; otherwise, <c>false</c>.</value>
-        </member>
         <member name="T:Lina.AnCo.Core.CalculationType">
             <summary>
             Calculation type.
@@ -265,11 +75,10 @@
             </summary>
             <value>The result.</value>
         </member>
-        <member name="P:Lina.AnCo.Core.QuestionModel.UserAnswer">
+        <member name="M:Lina.AnCo.Core.QuestionModel.Restart">
             <summary>
-            User trả lời xong thì gán vào thuộc tính này.
+            Restart this instance.
             </summary>
-            <value>The user answer.</value>
         </member>
         <member name="T:Lina.AnCo.Core.ACGlobalService">
             <summary>
@@ -383,17 +192,33 @@
             The timer. Unit second.
             </summary>
         </member>
-        <member name="M:Lina.AnCo.Core.GameModel.CheckQuestion(Lina.AnCo.Core.NotificationType@)">
+        <member name="M:Lina.AnCo.Core.GameModel.CheckAnswer(System.Double,Lina.AnCo.Core.NotificationType@)">
             <summary>
-            Checks the question. Kiểm tra xem câu trả lời đưa ra đã đúng chưa.
+            Checks the answer. Kiểm tra xem câu trả lời đưa ra đã đúng chưa.
             </summary>
             <returns>
-                <c>true</c>, if question was checked, <c>false</c> otherwise.</returns>
+                <c>true</c>, if answer was checked, <c>false</c> otherwise.</returns>
+            <param name="user">User.</param>
             <param name="noti">Noti.</param>
         </member>
         <member name="M:Lina.AnCo.Core.GameModel.Start">
             <summary>
             Start this instance.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameModel.Restart">
+            <summary>
+            Restart this instance.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameModel.Resume">
+            <summary>
+            Resume this instance.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameModel.Stop">
+            <summary>
+            Stop this instance.
             </summary>
         </member>
         <member name="T:Lina.AnCo.Core.NotificationType">
@@ -415,6 +240,98 @@
             <summary>
             The unknow.
             </summary>
+        </member>
+        <member name="T:Lina.AnCo.Core.GameService">
+            <summary>
+            Game service.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Lina.AnCo.Core.GameService" /> class.
+            </summary>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.StartGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
+            <summary>
+            Starts the game.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.Return(System.Double,System.Action{System.Boolean,Lina.AnCo.Core.NotificationType,Lina.AnCo.Core.GameModel})">
+            <summary>
+            Return the specified userAnswer and actionDone.
+            Trường hợp 1: Nếu user trả lời đúng thì kiểm tra NotificationType, nếu NotificationType ==
+            NotificationType.LevelUp thì thông báo Level Up, sau đó chuyển sang câu tiếp theo, nếu không thì chuyển sang câu
+            hỏi tiếp theo.
+            Trường hợp 2: Nếu user trả lời sai thì thông báo game over sau đó kiểm tra NotificationType, nếu NotificationType
+            == NotificationType.QuestionUp thì thông báo có thành tích mới.
+            </summary>
+            <param name="userAnswer">User answer.</param>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.StopGame(System.Action{Lina.AnCo.Core.NotificationType})">
+            <summary>
+            Stops the game. Platform chủ gọi hàm này nếu muốn Stop Game. Dùng khi hết thời gian
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.PauseGame(System.Action{System.Boolean})">
+            <summary>
+            Pauses the game.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.ResumeGame(System.Action{System.Boolean,Lina.AnCo.Core.GameModel})">
+            <summary>
+            Resumes the game.
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.PlayAudio(System.String)">
+            <summary>
+            Plaies the audio.
+            </summary>
+            <param name="file">File.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.Vibrate">
+            <summary>
+            Gets the state of the shake.
+            </summary>
+            <returns>true</returns>
+            <c>false</c>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.ChangeSoundState(System.Action{System.Boolean})">
+            <summary>
+            Changes the state of the sound. ActionDone return current sound state
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.ChangeVibrateState(System.Action{System.Boolean})">
+            <summary>
+            Changes the state of the shake. ActionDone return current shake state
+            </summary>
+            <param name="actionDone">Action done.</param>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.GetSoundState">
+            <summary>
+            Gets the state of the sound.
+            </summary>
+            <returns>true</returns>
+            <c>false</c>
+        </member>
+        <member name="M:Lina.AnCo.Core.GameService.GetVibrateState">
+            <summary>
+            Gets the state of the shake.
+            </summary>
+            <returns>
+                <c>true</c>, if shake state was gotten, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="P:Lina.AnCo.Core.GameService.VibrateState">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Lina.AnCo.Core.GameService" /> vibrate state.
+            </summary>
+            <value>
+                <c>true</c> if vibrate state; otherwise, <c>false</c>.</value>
         </member>
     </members>
 </doc>

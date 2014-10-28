@@ -15,6 +15,12 @@
             </summary>
             <value>The version.</value>
         </member>
+        <member name="P:Lina.Customs.Core.IPlatformService.Device">
+            <summary>
+            Gets the device.
+            </summary>
+            <value>The device.</value>
+        </member>
         <member name="M:Lina.Customs.Core.IPlatformService.ShowAlert(System.String,System.String,System.String,System.Action)">
             <summary>
             Shows the alert.
@@ -80,9 +86,8 @@
         </member>
         <member name="M:Lina.Customs.Core.IPlatformService.Vibrate">
             <summary>
-            Shake the specified actionDone.
+            Vibrate this instance.
             </summary>
-            <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.Customs.Core.PlatformService">
             <summary>
@@ -94,6 +99,12 @@
             Gets the version. Return iOS, Android, WindowPhone
             </summary>
             <value>The version.</value>
+        </member>
+        <member name="P:Lina.Customs.Core.PlatformService.Device">
+            <summary>
+            Gets the device.
+            </summary>
+            <value>The device.</value>
         </member>
         <member name="M:Lina.Customs.Core.PlatformService.ShowAlert(System.String,System.String,System.String,System.Action)">
             <summary>
@@ -160,9 +171,8 @@
         </member>
         <member name="M:Lina.Customs.Core.PlatformService.Vibrate">
             <summary>
-            Shake the specified actionDone.
+            Vibrate this instance.
             </summary>
-            <param name="actionDone">Action done.</param>
         </member>
         <member name="T:Lina.Customs.Core.ISettingService">
             <summary>
@@ -628,6 +638,46 @@
             <see cref="M:Lina.AnCo.Core.LNCounter.Dispose" /> method leaves the <see cref="T:Lina.AnCo.Core.LNCounter" /> in an unusable state. After calling
             <see cref="M:Lina.AnCo.Core.LNCounter.Dispose" />, you must release all references to the <see cref="T:Lina.AnCo.Core.LNCounter" /> so the
             garbage collector can reclaim the memory that the <see cref="T:Lina.AnCo.Core.LNCounter" /> was occupying.</remarks>
+        </member>
+        <member name="T:Lina.Customs.Core.LNDevice">
+            <summary>
+            LN device.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.LNDevice.iPhone">
+            <summary>
+            The i phone.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.LNDevice.iPad">
+            <summary>
+            The i pad.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.LNDevice.iPod">
+            <summary>
+            The i pod.
+            </summary>
+        </member>
+        <member name="T:Lina.Customs.Core.AdsType">
+            <summary>
+            Ads type.
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.AdsType.Top">
+            <summary>
+            Show on Top
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.AdsType.Bottom">
+            <summary>
+            Show on Bottom
+            </summary>
+        </member>
+        <member name="F:Lina.Customs.Core.AdsType.Full">
+            <summary>
+            Show Full Screen
+            </summary>
         </member>
     </members>
 </doc>
