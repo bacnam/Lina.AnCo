@@ -89,6 +89,13 @@
             Vibrate this instance.
             </summary>
         </member>
+        <member name="M:Lina.Customs.Core.IPlatformService.RegisterPushLocation(System.String,System.String)">
+            <summary>
+            Registers the push location.
+            </summary>
+            <param name="action">Action.</param>
+            <param name="body">Body.</param>
+        </member>
         <member name="T:Lina.Customs.Core.PlatformService">
             <summary>
             Platform service.
@@ -173,6 +180,15 @@
             <summary>
             Vibrate this instance.
             </summary>
+        </member>
+        <member name="M:Lina.Customs.Core.PlatformService.RegisterPushLocation(System.String,System.String)">
+            <summary>
+            Registers the push location.
+            </summary>
+            <param name="message">Message.</param>
+            <param name="actionDone">Action done.</param>
+            <param name="action">Action.</param>
+            <param name="body">Body.</param>
         </member>
         <member name="T:Lina.Customs.Core.ISettingService">
             <summary>
